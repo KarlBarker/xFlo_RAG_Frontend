@@ -1,0 +1,7 @@
+{
+  "installDependencies": true,
+  "startCommand": "npm run dev",
+  "env": {
+    "NEXT_PUBLIC_API_URL": "http://localhost:8000"
+  }
+}
