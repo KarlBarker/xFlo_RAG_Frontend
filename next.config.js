@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -8,9 +7,17 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: '/api/:path*',
-        destination: 'http://localhost:8000/:path*',
+        source: '/storage/:path*',
+        destination: 'http://localhost:8000/storage/:path*'
       },
+      {
+        source: '/docs',
+        destination: 'http://localhost:8000/docs'
+      },
+      {
+        source: '/docs/:path*',
+        destination: 'http://localhost:8000/docs/:path*'
+      }
     ];
   },
 };
