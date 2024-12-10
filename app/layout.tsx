@@ -21,13 +21,13 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="flex h-screen">
           <Sidebar />
-          <div className="flex-1">
-            <header className="border-b">
-              <div className="flex h-16 items-center px-4">
-                <MainNav className="mx-6" />
+          <div className="flex-1 ml-64">
+            <header className="fixed top-0 right-0 left-64 bg-white z-20">
+              <div className="flex h-14 items-center px-6">
+                <MainNav />
               </div>
             </header>
-            <main>{children}</main>
+            <main className="pt-14 h-[calc(100vh-3.5rem)]">{children}</main>
           </div>
         </div>
       </body>

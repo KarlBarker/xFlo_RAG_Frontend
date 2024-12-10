@@ -12,14 +12,14 @@ export function MainNav({
 
   return (
     <nav
-      className={cn("flex items-center space-x-4 lg:space-x-6", className)}
+      className={cn("flex items-center space-x-6", className)}
       {...props}
     >
       <Link
         href="/"
         className={cn(
-          "text-sm font-medium transition-colors hover:text-primary",
-          pathname === "/" ? "text-primary" : "text-muted-foreground"
+          "text-sm font-medium transition-colors hover:text-gray-900",
+          pathname === "/" ? "text-gray-900" : "text-gray-500"
         )}
       >
         Dashboard
@@ -27,8 +27,8 @@ export function MainNav({
       <Link
         href="/documents"
         className={cn(
-          "text-sm font-medium transition-colors hover:text-primary",
-          pathname === "/documents" ? "text-primary" : "text-muted-foreground"
+          "text-sm font-medium transition-colors hover:text-gray-900",
+          pathname === "/documents" ? "text-gray-900" : "text-gray-500"
         )}
       >
         Documents
@@ -36,8 +36,8 @@ export function MainNav({
       <Link
         href="/chat"
         className={cn(
-          "text-sm font-medium transition-colors hover:text-primary",
-          pathname === "/chat" ? "text-primary" : "text-muted-foreground"
+          "text-sm font-medium transition-colors hover:text-gray-900",
+          pathname === "/chat" ? "text-gray-900" : "text-gray-500"
         )}
       >
         Chat

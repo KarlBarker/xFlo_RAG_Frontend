@@ -1,10 +1,10 @@
 'use client';
 
-import { ChatInterface } from "@/components/ChatInterface";
+import { ChatInterface } from '@/components/ChatInterface';
 
 export default function ChatPage() {
   return (
-    <div className="flex-1">
+    <div className="h-full">
       <ChatInterface />
     </div>
   );
