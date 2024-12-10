@@ -68,7 +68,11 @@ export function Sidebar({ className }: SidebarProps) {
                     variant={currentThreadId === thread.id ? "secondary" : "ghost"}
                     className="w-full justify-start text-left"
                   >
-                    <span className="truncate">{thread.title || "New Chat"}</span>
+                    <span className="truncate">
+                      {thread.messages.length > 0
+                        ? thread.messages[0].content.slice(0, 30) + "..."
+                        : "New Chat"}
+                    </span>
                   </Button>
                   <Button
                     variant="ghost"
