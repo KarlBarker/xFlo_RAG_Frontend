@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { UserNav } from "./user-nav";
 
 export function MainNav({
   className,
@@ -16,10 +17,10 @@ export function MainNav({
       {...props}
     >
       <Link
-        href="/"
+        href="/dashboard"
         className={cn(
           "text-sm font-medium transition-colors hover:text-gray-900",
-          pathname === "/" ? "text-gray-900" : "text-gray-500"
+          pathname === "/dashboard" ? "text-gray-900" : "text-gray-500"
         )}
       >
         Dashboard
@@ -42,6 +43,7 @@ export function MainNav({
       >
         Chat
       </Link>
+      <UserNav />
     </nav>
   );
 }

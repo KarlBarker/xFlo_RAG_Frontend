@@ -3,23 +3,21 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  images: { unoptimized: true },
+  images: {
+    domains: ['localhost'],
+    unoptimized: true,
+    dangerouslyAllowSVG: true,
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
   async rewrites() {
     return [
-      {
-        source: '/storage/:path*',
-        destination: 'http://localhost:8000/storage/:path*'
-      },
-      {
-        source: '/docs',
-        destination: 'http://localhost:8000/docs'
-      },
       {
         source: '/docs/:path*',
         destination: 'http://localhost:8000/docs/:path*'
       }
     ];
-  },
+  }
 };
 
 module.exports = nextConfig;
